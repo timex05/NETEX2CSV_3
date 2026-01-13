@@ -1,0 +1,8 @@
+﻿..\..\data\netex\nuernberg\NX-PI-01_DE_NAP_LINE_van_d-T-62_20251101.xml
+..\..\data\netex\nuernberg\NX-PI-01_DE_NAP_LINE_van_d-T-63_20251101.xml
+..\..\data\netex\nuernberg\NX-PI-01_DE_NAP_LINE_van_d-T-64_20251101.xml
+..\..\data\netex\nuernberg\NX-PI-01_DE_NAP_LINE_van_d-T-76_20251101.xml
+..\..\data\netex\nuernberg\NX-PI-01_DE_NAP_LINE_van_d-T-60_20251101.xml
+..\..\data\netex\nuernberg\NX-PI-01_DE_NAP_LINE_van_d-T-61_20251101.xml
+..\..\data\netex\nuernberg\NX-PI-01_DE_NAP_LINE_van_d-T-65_20251101.xml
+..\..\data\netex\nuernberg\NX-PI-01_DE_NAP_LINE_van_d-T-77_20251101.xml

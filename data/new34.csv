@@ -1,0 +1,16 @@
+DE::StopPlace:137_van_d::	de:09564:545	Nürnberg Wodanstr.	11.0912	49.4368	318	---	DE::Quay:10013701_van_d::	Nürnberg Wodanstr.	de:09564:545:12:11	11.0914	49.4367	318
+DE::StopPlace:137_van_d::	de:09564:545	Nürnberg Wodanstr.	11.0912	49.4368	318	---	DE::Quay:10013702_van_d::	Nürnberg Wodanstr.	de:09564:545:12:12	11.0913	49.4367	318
+DE::StopPlace:129_van_d::	de:09564:536	Nürnberg Schweiggerstr.	11.09	49.4415	315	---	DE::Quay:10012903_van_d::	Nürnberg Schweiggerstr.	de:09564:536:12:13	11.0902	49.4413	315
+DE::StopPlace:129_van_d::	de:09564:536	Nürnberg Schweiggerstr.	11.09	49.4415	315	---	DE::Quay:10012902_van_d::	Nürnberg Schweiggerstr.	de:09564:536:12:12	11.0895	49.4414	-1
+DE::StopPlace:129_van_d::	de:09564:536	Nürnberg Schweiggerstr.	11.09	49.4415	315	---	DE::Quay:10012904_van_d::	Nürnberg Schweiggerstr.	de:09564:536:12:14	11.0896	49.4419	313
+DE::StopPlace:138_van_d::	de:09564:546	Nürnberg Widhalmstr.	11.086	49.4449	310	---	DE::Quay:10013801_van_d::	Nürnberg Widhalmstr.	de:09564:546:12:11	11.0859	49.4452	-1
+DE::StopPlace:138_van_d::	de:09564:546	Nürnberg Widhalmstr.	11.086	49.4449	310	---	DE::Quay:10013802_van_d::	Nürnberg Widhalmstr.	de:09564:546:12:12	11.0858	49.4445	310
+DE::StopPlace:129_van_d::	de:09564:536	Nürnberg Schweiggerstr.	11.09	49.4415	315	---	DE::Quay:10012901_van_d::	Nürnberg Schweiggerstr.	de:09564:536:12:11	11.0906	49.4417	313
+DE::StopPlace:286_van_d::	de:09564:1293	Nürnberg Thon	11.0645	49.4736	307	---	DE::Quay:10028602_van_d::	Nürnberg Thon	de:09564:1293:12:11	11.0647	49.4732	310
+DE::StopPlace:286_van_d::	de:09564:1293	Nürnberg Thon	11.0645	49.4736	307	---	DE::Quay:10028603_van_d::	Nürnberg Thon	de:09564:1293:12:12	11.0646	49.4732	310
+DE::StopPlace:287_van_d::	de:09564:1294	Nürnberg Cuxhavener Str.	11.0624	49.4771	316	---	DE::Quay:10028701_van_d::	Nürnberg Cuxhavener Str.	de:09564:1294:12:11	11.0623	49.4773	-1
+DE::StopPlace:287_van_d::	de:09564:1294	Nürnberg Cuxhavener Str.	11.0624	49.4771	316	---	DE::Quay:10028702_van_d::	Nürnberg Cuxhavener Str.	de:09564:1294:12:12	11.0623	49.4773	316
+DE::StopPlace:288_van_d::	de:09564:1295	Nürnberg Schleswiger Str.	11.0607	49.4801	314	---	DE::Quay:10028801_van_d::	Nürnberg Schleswiger Str.	de:09564:1295:12:11	11.0608	49.4805	314
+DE::StopPlace:288_van_d::	de:09564:1295	Nürnberg Schleswiger Str.	11.0607	49.4801	314	---	DE::Quay:10028802_van_d::	Nürnberg Schleswiger Str.	de:09564:1295:12:12	11.0607	49.4804	314
+DE::StopPlace:1001350012_van_d::	de:09564:543:12	Nürnberg Schuckertstr.	0	0	0	---	DE::Quay:10013501_van_d::	Nürnberg Schuckertstr.	de:09564:543:12:11	11.0764	49.4343	316
+DE::StopPlace:1001350012_van_d::	de:09564:543:12	Nürnberg Schuckertstr.	0	0	0	---	DE::Quay:10013502_van_d::	Nürnberg Schuckertstr.	de:09564:543:12:12	11.0763	49.4343	316
