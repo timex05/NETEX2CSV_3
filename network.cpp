@@ -22,6 +22,7 @@ size_t writeCallback(void* contents, size_t size, size_t nmemb, void* userp)
     size_t totalSize = size * nmemb;
     std::string* response = static_cast<std::string*>(userp);
     response->append(static_cast<char*>(contents), totalSize);
+    
     return totalSize;
 }
 
@@ -30,6 +31,7 @@ size_t writeCallback(void* contents, size_t size, size_t nmemb, void* userp)
 double elevation(double lat, double lon)
 {
     CURL* curl = curl_easy_init();
+    curl_easy_reset(curl);
     if (!curl) return -1.0;
 
     std::ostringstream url;
@@ -577,10 +579,12 @@ void _NETWORK::ExportStopPlacesForContour(string filename)
         return;
     }
 
-    for (const auto& sp : this->StopPlaces) {
-        file << sp.lon << " "
-             << sp.lat  << " "
-             << sp.alt  << "\n";
+    std::list<struct _STOPPLACE>::iterator it;
+
+    for (it = this->StopPlaces.begin(); it != this->StopPlaces.end(); ++it) {
+        file << it->lon << " "
+             << it->lat  << " "
+             << it->alt  << "\n";
     }
     file.close();
 }
