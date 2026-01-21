@@ -22,9 +22,11 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="curl-8.16.0_3-win64-mingw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add directory="curl-8.16.0_3-win64-mingw/lib" />
 				</Linker>
 			</Target>
 		</Build>
@@ -32,7 +34,25 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Linker>
+			<Add library="D:/Privat/Programmieren/NETEX2CSV_3/curl-8.16.0_3-win64-mingw/lib/libcurl.dll.a" />
+		</Linker>
+		<Unit filename="cJSON/cJSON.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cJSON/cJSON.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="network.cpp" />
+		<Unit filename="network.h" />
+		<Unit filename="pugiconfig.hpp" />
+		<Unit filename="pugixml.cpp" />
+		<Unit filename="pugixml.hpp" />
+		<Unit filename="quay.cpp" />
+		<Unit filename="quay.h" />
+		<Unit filename="route.cpp" />
+		<Unit filename="route.h" />
+		<Unit filename="stopplace.cpp" />
+		<Unit filename="stopplace.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
