@@ -17,6 +17,7 @@
 #include <map>
 
 
+// Callback-Funktion zum Schreiben der empfangenen Daten in einen std::string
 size_t writeCallback(void* contents, size_t size, size_t nmemb, void* userp)
 {
     size_t totalSize = size * nmemb;
@@ -29,62 +30,69 @@ size_t writeCallback(void* contents, size_t size, size_t nmemb, void* userp)
 
 double elevation(double lat, double lon)
 {
+    // curl initialisieren
     CURL* curl = curl_easy_init();
+    // Fehler überprüfen
     if (!curl) return -1.0;
 
+    // url initialisieren
     std::ostringstream url;
     url << "https://api.open-elevation.com/api/v1/lookup?locations="
         << lat << "," << lon;
 
     std::string response;
 
+    // url setzen
     curl_easy_setopt(curl, CURLOPT_URL, url.str().c_str());
+    // write callback setzen
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writeCallback);
+    // response variable setzen
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
+    // User-Agent setzen
     curl_easy_setopt(curl, CURLOPT_USERAGENT, "elevation-client/1.0");
+    // Timeout setzen
     curl_easy_setopt(curl, CURLOPT_TIMEOUT, 10L);
 
+    // SSL Prüfung deaktivieren
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
 
-
+    // Ergebnis Variable
     double value = -1.0;
 
+    // 3 Versuche
     for (int i = 0; i < 3; ++i) {
         response.clear(); // alte Response löschen
-
-        CURLcode res = curl_easy_perform(curl);
-
+        CURLcode res = curl_easy_perform(curl); // Abfrage durchführen
+        // Fehler überprüfen
         if (res != CURLE_OK) {
-            std::cerr << "curl error: " << curl_easy_strerror(res) << std::endl;
-            Sleep(3000); // Retry Pause
-            continue;     // nächster Versuch
+            std::cerr << "curl error: " << curl_easy_strerror(res) << std::endl; // Fehler Ausgabe
+            Sleep(3000); // Pause 3 Sekunden
+            continue; // Nächster Loop
         }
-
-        cJSON* root = cJSON_Parse(response.c_str());
+        cJSON* root = cJSON_Parse(response.c_str()); // Response in JSON parsen
+        // Fehler überprüfen
         if (!root) {
-            std::cerr << "JSON parse error\n";
-            Sleep(3000);
-            continue;
+            std::cerr << "JSON parse error\n"; // Fehler Ausgabe
+            Sleep(3000); // Pause 3 Sekunden
+            continue; // Nächster Loop
         }
-
+        // Daten aus JSON extrahieren
         cJSON* results = cJSON_GetObjectItem(root, "results");
         cJSON* first = cJSON_GetArrayItem(results, 0);
         cJSON* elevation = cJSON_GetObjectItem(first, "elevation");
-
         if (cJSON_IsNumber(elevation)) {
-            value = elevation->valuedouble;
-            cJSON_Delete(root);
+            value = elevation->valuedouble; // Ergebnis setzen
+            cJSON_Delete(root); // JSON Objekt löschen
             break; // Erfolgreich, Schleife abbrechen
         }
-
-        cJSON_Delete(root);
-        Sleep(3000); // kurze Pause
+        cJSON_Delete(root); // JSON Objekt löschen
+        Sleep(3000); // Pause 3 Sekunden
     }
 
+    // curl aufräumen
     curl_easy_cleanup(curl);
     return value;
-
 }
 
 
