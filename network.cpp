@@ -33,6 +33,8 @@ double elevation(double lat, double lon)
 {
     // curl initialisieren
     CURL* curl = curl_easy_init();
+
+    // curl resetten
     curl_easy_reset(curl);
     if (!curl) return -1.0;
 
