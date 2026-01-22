@@ -42,6 +42,7 @@ splot "routes.dat" index 0 with linespoints ls 1 title "Linie 1", \
       "routes.dat" index 3 using ($1+0.001):2:3 with linespoints ls 4 title "Linie 4", \
       "routes.dat" index 4 with linespoints ls 5 title "Linie 5", \
       "routes.dat" index 5 with linespoints ls 6 title "Linie 6", \
+      "routes.dat" index 6 with linespoints ls 7 title "Linie 7", \
       "routes.dat" index 0 using 1:2:(0):(0):(0):3 with vectors nohead ls 10 notitle, \
       "routes.dat" index 1 using 1:2:(0):(0):(0):3 with vectors nohead ls 10 notitle, \
       "routes.dat" index 2 using 1:2:(0):(0):(0):3 with vectors nohead ls 10 notitle, \

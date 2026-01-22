@@ -1,0 +1,1 @@
+NETEX -D "../../data/netex.txt" -E "../../data/output.csv" -d "../../data/contour/sopplace.dat" -d "../../data/contour/routes.dat"

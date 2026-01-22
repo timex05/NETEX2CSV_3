@@ -17,7 +17,7 @@
 #include <map>
 
 
-// Callback-Funktion zum Schreiben der empfangenen Daten in einen std::string
+// Callback-Funktion zum Schreiben der empfangenen Daten in einen string
 size_t writeCallback(void* contents, size_t size, size_t nmemb, void* userp)
 {
     size_t totalSize = size * nmemb;
@@ -36,6 +36,8 @@ double elevation(double lat, double lon)
 
     // curl resetten
     curl_easy_reset(curl);
+
+    // überprüfen ob Fehler
     if (!curl) return -1.0;
 
     // url initialisieren
@@ -632,7 +634,7 @@ void _NETWORK::ExportRoutesForContour(string filename)
                  << quayIt->lat  << " "
                  << quayIt->alt  << "\n";
         }
-        file << "\n"; // Leerzeile trennt Linien
+        file << "\n\n"; // Leerzeile trennt Linien
     }
 
 
